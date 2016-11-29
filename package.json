@@ -58,10 +58,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/JohannBillar/#.git"
+    "url": "git://github.com/JohannBillar/todo-app-with-react.git"
   },
   "bugs": {
-    "url": "https://github.com/JohannBillar/#/issues"
+    "url": "https://github.com/JohannBillar/todo-app-with-react/issues"
   },
-  "homepage": "https://github.com/JohannBillar/##readme"
+  "homepage": "https://github.com/JohannBillar/todo-app-with-react#readme"
 }
