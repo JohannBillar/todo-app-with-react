@@ -3,13 +3,6 @@ import React, { Component } from 'react';
 import DataEntry from './DataEntry';
 import ToDoList from './ToDoList';
 
-const styles = {
-  div: {
-    margin: '20px 40px',
-    fontSize: '.75em',
-  },
-};
-
 class ToDoListContainer extends Component {
   constructor() {
     super();
@@ -65,7 +58,7 @@ class ToDoListContainer extends Component {
       (<ToDoList
         listItems={this.state.items}
         onDeleteItem={this.handleDeleteItem}
-      />) : (<div style={styles.div}> You have nothing that needs doing...?</div>);
+      />) : (<div> You have nothing that needs to be done...?</div>);
 
     return (
       <div className="todo-list">
