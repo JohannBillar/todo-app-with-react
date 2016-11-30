@@ -21,7 +21,7 @@ class ListItem extends Component {
   }
 
   componentWillMount() {
-    const isCheckedInStorage = JSON.parse(localStorage.getItem('isCheckedStored'));
+    const isCheckedInStorage = JSON.parse(localStorage.getItem(JSON.stringify(this.props.id)));
     if (isCheckedInStorage) {
       this.toggleCheckbox();
     }
@@ -29,7 +29,7 @@ class ListItem extends Component {
 
   componentDidUpdate(prevProps, prevState) {
     if (prevState.isChecked !== this.state.isChecked) {
-      localStorage.setItem('isCheckedStored', JSON.stringify(this.state.isChecked));
+      localStorage.setItem(JSON.stringify(this.props.id), JSON.stringify(this.state.isChecked));
     }
   }
 
