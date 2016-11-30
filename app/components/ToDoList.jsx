@@ -1,4 +1,5 @@
 import React, { PropTypes } from 'react';
+
 import ListItem from './ListItem';
 
 const propTypes = {
@@ -12,6 +13,7 @@ function ToDoList({ listItems, onDeleteItem }) {
       {listItems.map((item, index) => (
         <ListItem
           key={item.id}
+          id={item.id}
           index={index}
           item={item.text}
           deleteListItem={onDeleteItem}

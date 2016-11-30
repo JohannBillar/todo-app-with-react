@@ -22,8 +22,8 @@
   li > button:hover {
     border: none;
   }
-  .check-box {
-    margin: 10px;
+  .checkbox-input {
+    margin: 5px;
   }
 // }
 
@@ -33,6 +33,10 @@
     font-weight: 300;
     font-color: $text-color;
   }
+}
+
+.checkbox-input {
+  cursor: pointer;
 }
 
 // List toggle done styles

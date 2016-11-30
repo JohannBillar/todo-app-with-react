@@ -1,10 +1,12 @@
 import React, { PropTypes, Component } from 'react';
+
 import CheckBox from './CheckBox';
 
 const propTypes = {
   index: PropTypes.number.isRequired,
   item: PropTypes.string.isRequired,
   deleteListItem: PropTypes.func.isRequired,
+  id: PropTypes.number.isRequired,
 };
 
 class ListItem extends Component {
@@ -19,18 +21,15 @@ class ListItem extends Component {
   }
 
   componentWillMount() {
-    const isCheckedInStorage = JSON.parse(localStorage.getItem('isChecked'));
-    if (isCheckedInStorage === true) {
-      this.setState({
-        toDoStatus: 'todo-done',
-        isChecked: true,
-      });
+    const isCheckedInStorage = JSON.parse(localStorage.getItem('isCheckedStored'));
+    if (isCheckedInStorage) {
+      this.toggleCheckbox();
     }
   }
 
   componentDidUpdate(prevProps, prevState) {
     if (prevState.isChecked !== this.state.isChecked) {
-      localStorage.setItem('isChecked', JSON.stringify(this.state.isChecked));
+      localStorage.setItem('isCheckedStored', JSON.stringify(this.state.isChecked));
     }
   }
 
@@ -50,17 +49,22 @@ class ListItem extends Component {
     const toDoStatus = this.state.toDoStatus;
     return (
       <li className={toDoStatus}>
+
         <CheckBox
           isChecked={this.state.isChecked}
           toggleCheckbox={this.toggleCheckbox}
-        />
-        {`${count} -   ${this.props.item}`}
+          id={this.props.id}
+        >
+          {`${count} -   ${this.props.item}`}
+        </CheckBox>
+
         <button
           className="btn-x-small"
           onClick={this.handleDeleteListItem}
         >
           x
         </button>
+
       </li>
     );
   }

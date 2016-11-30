@@ -1,7 +1,8 @@
 import React from 'react';
 import { render } from 'react-dom';
-import ToDoListApp from './components/ToDoListApp';
+
+import App from './components/App';
 
 require('./sass/main.scss');
 
-render(<ToDoListApp />, document.getElementById('root'));
+render(<App />, document.getElementById('root'));
