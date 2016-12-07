@@ -1,10 +1,11 @@
 import React, { PropTypes } from 'react';
-
 import ListItem from './ListItem';
 
+const { arrayOf, object, func } = PropTypes;
+
 const propTypes = {
-  listItems: PropTypes.arrayOf(PropTypes.object).isRequired,
-  onDeleteItem: PropTypes.func.isRequired,
+  listItems: arrayOf(object).isRequired,
+  onDeleteItem: func.isRequired,
 };
 
 function ToDoList({ listItems, onDeleteItem }) {

@@ -1,10 +1,12 @@
 import React, { PropTypes } from 'react';
 
+const { bool, func, number, string } = PropTypes;
+
 const propTypes = {
-  isChecked: PropTypes.bool.isRequired,
-  toggleCheckbox: PropTypes.func.isRequired,
-  id: PropTypes.number.isRequired,
-  children: PropTypes.string.isRequired,
+  isChecked: bool.isRequired,
+  toggleCheckbox: func.isRequired,
+  id: number.isRequired,
+  children: string.isRequired,
 };
 
 function CheckBox({ isChecked, toggleCheckbox, id, children }) {

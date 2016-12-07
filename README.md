@@ -7,4 +7,6 @@ ___
 
 $ npm install
 $ npm start or $ NODE_ENV=production npm start
+
+http://localhost:8080/
 ```

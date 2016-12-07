@@ -1,12 +1,13 @@
 import React, { PropTypes, Component } from 'react';
-
 import CheckBox from './CheckBox';
 
+const { number, string, func } = PropTypes;
+
 const propTypes = {
-  index: PropTypes.number.isRequired,
-  item: PropTypes.string.isRequired,
-  deleteListItem: PropTypes.func.isRequired,
-  id: PropTypes.number.isRequired,
+  index: number.isRequired,
+  item: string.isRequired,
+  deleteListItem: func.isRequired,
+  id: number.isRequired,
 };
 
 class ListItem extends Component {

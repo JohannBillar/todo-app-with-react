@@ -1,9 +1,11 @@
 import React, { PropTypes } from 'react';
 
+const { func, string } = PropTypes;
+
 const propTypes = {
-  onInputSubmit: PropTypes.func.isRequired,
-  onInputChange: PropTypes.func.isRequired,
-  value: PropTypes.string.isRequired,
+  onInputSubmit: func.isRequired,
+  onInputChange: func.isRequired,
+  value: string.isRequired,
 };
 
 function DataEntry({ onInputSubmit, onInputChange, value }) {
