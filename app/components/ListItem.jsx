@@ -13,8 +13,10 @@ const propTypes = {
 class ListItem extends Component {
   constructor() {
     super();
+
     this.handleDeleteListItem = this.handleDeleteListItem.bind(this);
     this.toggleCheckbox = this.toggleCheckbox.bind(this);
+
     this.state = {
       toDoStatus: 'todo-not-done',
       isChecked: false,

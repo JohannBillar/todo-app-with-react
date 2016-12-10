@@ -1,13 +1,16 @@
 import React, { Component } from 'react';
+import Container from './Container';
 import DataEntry from './DataEntry';
 import ToDoList from './ToDoList';
 
 class ToDoListContainer extends Component {
   constructor() {
     super();
+
     this.handleInputChange = this.handleInputChange.bind(this);
     this.handleSubmitItem = this.handleSubmitItem.bind(this);
     this.handleDeleteItem = this.handleDeleteItem.bind(this);
+
     this.state = {
       value: '',
       items: [],
@@ -60,25 +63,20 @@ class ToDoListContainer extends Component {
       />) : (<div> You have nothing that needs to be done...?</div>);
 
     return (
-      <div className="todo-list">
+      <Container>
         <DataEntry
           onInputSubmit={this.handleSubmitItem}
           value={this.state.value}
           onInputChange={this.handleInputChange}
         />
         {list}
-      </div>
+      </Container>
     );
   }
 }
 
 function App() {
-  return (
-    <div className="container">
-      <h1>ToDo List Creater</h1>
-      <ToDoListContainer />
-    </div>
-  );
+  return <ToDoListContainer />;
 }
 
 export default App;
