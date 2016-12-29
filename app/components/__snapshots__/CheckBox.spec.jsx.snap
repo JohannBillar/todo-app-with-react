@@ -1,0 +1,12 @@
+exports[`test CheckBox should render a checkbox 1`] = `
+<label
+  htmlFor={0}>
+  <input
+    checked={false}
+    className="checkbox-input"
+    id={0}
+    onChange={[Function]}
+    type="checkbox" />
+  test.number
+</label>
+`;
